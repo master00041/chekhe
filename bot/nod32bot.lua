@@ -245,282 +245,186 @@ function create_config( )
     "time",
     "version"
     },
-	    sudo_users = {158990680},--Sudo users
+	    sudo_users = {104583328},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[
-https://github.com/BH-YAGHI/NOD32-BOT.git
-
-channel : @Nod32team
-sodu : @behrooZyaghi
+an intelligent bot on telegran
+sudo:@Oomaster_officialoO
 ]],
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
+creategroup [Name]
 Create a group
 
-!createrealm [Name]
+createrealm [Name]
 Create a realm
 
-!setname [Name]
+setname [Name]
 Set realm name
 
-!setabout [GroupID] [Text]
+setabout [GroupID] [Text]
 Set a group's about text
 
-!setrules [GroupID] [Text]
+setrules [GroupID] [Text]
 Set a group's rules
 
-!lock [GroupID] [setting]
+lock [GroupID] [setting]
 Lock a group's setting
 
-!unlock [GroupID] [setting]
+unlock [GroupID] [setting]
 Unock a group's setting
 
-!wholist
+wholist
 Get a list of members in group/realm
 
-!who
+who
 Get a file of members in group/realm
 
-!type
+type
 Get group type
 
-!kill chat [GroupID]
+kill chat [GroupID]
 Kick all memebers and delete group
 
-!kill realm [RealmID]
+kill realm [RealmID]
 Kick all members and delete realm
 
-!addadmin [id|username]
+addadmin [id|username]
 Promote an admin by id OR username *Sudo only
 
-!removeadmin [id|username]
+removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
 
-!list groups
+list groups
 Get a list of all groups
 
-!list realms
+list realms
 Get a list of all realms
 
-!log
+log
 Grt a logfile of current group or realm
 
-!broadcast [text]
-!broadcast Hello !
+broadcast [text]
+broadcast Hello !
 Send text to all groups
 Only sudo users can run this command
 
-!bc [group_id] [text]
-!bc 123456789 Hello !
+bc [group_id] [text]
+bc 123456789 Hello !
 This command will send text to [group_id]
 
-ch: @Nod32team
+sudo:@Oomaster_officialoO
 
 ]],
     help_text = [[
-NOD32 Commands list :
- 
-1-banhammer list ^
- 
-!kick [username|id]
-(کیک کردن شخص (حتی با ریپلی)
-
-!ban [ username|id]
-(بن کردن افراد (حتی با ریپلی)
-
-!unban [id]
-(انبن کردن افراد (همراه ایدی)
-
-!kickinactive
-حذف اعضای غیرغعال گروه
-
-!kickme
+1_kick::::username/id
+کیک کردن شخص با آیدی یا ریپلی کردن 
+2_ban::::username/id
+بن کردن شخص با آیدی یا ریپلی کردن
+3_unban::::id
+آن بن کردن کردن شخص با آیدی
+4_kickinactive
+حذف اعضای غیرفعال از گروه 
+5_kickme
 خروج از گروه
-
-2-Statistics list ^
-
-!who
+6_who
 لیست+ایدی همه اعضا
-
-!all
+7_all
 دریافت اطلاعات کلی گروه
-
-!stats
-امار کلی گروه
-
-!modlist
+8_stats
+آمار کلی گروه
+ 9_modlist
 لیست مدیران گروه
-
-!banlist
-لیست اعضا بن شده
-
-3-Rate Member ^
-
-!setowner [id]
-(id ایجاد مدیر جدید (همراه 
-
-!promote [username]
-(ایجاد ادمین جدید (همراه ریپلی)
-
-!demote [username]
-(برکنار کردن ادمین (همراه ریپلی)
-
-4-General changes ^
-
-!setname [name]
-ایجاد اسم جدید برای گروه
-
-!setphoto
-ایجاد عکس جدید برای پروفایل گروه
-
-!set rules <text>
-ایجاد قانون جدید برای گروه
-
-!set about <text>
+10_banlist
+لیست اعضای بن شده
+11_setowner[id]
+ایجاد مدیر جدید(همراه ایدی)
+12_promote[username]
+ایجاد ادمین جدید(با ریپلی)
+13_demote[username]
+برکنار کردن ادمین(با ریپلی)
+14_setname[name]
+ایجاد اسم جدید برای گروه برای مثال👇🏿
+setname teledam
+15_setphoto
+عکس جدید برای پروفایل گروه
+16_set rules <text>
+ایجاد قانون برای گروه برای مثال👇🏿
+set rules فحاشی ممنوع
+17_set about <text>
 ایجاد درباره گروه
-
-!setflood [value]
-حساسیت به اسپم در گروه
-
-5-View details ^
-
-!about
+18_setflood [value]
+حساسیت اسپم در گروه برای مثال👇🏿
+setflood 6
+19_about
 درباره گروه
-
-!rules
+20_rules
 قوانین گروه
-
-!settings
+21_settings
 دیدن تنظیمات فعلی گروه
-
-!help
+22_help
 لیست دستورات ربات
-
-6-Security Group ^
-
-!lock member 
+23_lock member 
 قفل ورود اعضا جدید
-
-!lock join
+24_lock join
 قفل ورود اعضا جدید توسط لینک
-
-!lock name
+25_lock name 
 قفل اسم گروه
-
-!lock chat
+26_lock chat
 قفل چت ممنوع
-
-!lock ads
+27_lock ads
 قفل تبلیغات
-
-!lock leave
-قفل خروج=بن گروه
-
-!lock fosh
+28_lock leave
+قفل خروج=بن شدن از گروه
+29_lock fosh
 ممنوع کردن فحش
-
-!lock chat
-قفل چت ممنوع گروه
-
-!antibot enable 
-ورود ربات ها ممنوع
-
-!antibot disable
+30_antibot enable
+ورود ربات ها ممنوع 
+31_antibot disable
 ورود ربات ها ازاد
-
-!unlock xxxx
-[*name*leave*member]
-[*fosh*ads]
-[chat*join*photo]
+32_unlock[name*leave*member*fosh*ads*chat*join*photo]
 باز کردن دستورات قفل شده
-
-7-Fun time ^
-
-!time country city
-ساعت کشور مورد نظر
-
-!loc country city
-مشخصات کشور و شهر مورد نظر
-
-!google
-سرچ مطلب مورد نظر از گوگل
- 
- !gps
- مکان کشور , شهر مورد نظر تحت گوگل
- 
- !calc 3+1
- انجام محاسبات ریاضی
-
-8-Service Provider ^
-
-!newlink
+33_time [country/city]
+ساعت شهر یا کشور مورد نظر
+34_loc [country/city]
+مشخصات کشور یا شهر مورد نظر
+35_google [something]
+سرچ مطلب مورد نظر در گوگل 
+برای مثال👇🏿
+google anonymous
+36_calc 3+1
+انجام محاسبات ریاضی 
+برای مثال👇🏿
+calc 10+40
+37_newlink
 ایجاد لینک جدید
-
-!link
+38_link
 نمایش لینک گروه
-
-!linkpv
-فرستادن لینک گروه تو پیوی
-(حتما شماره ربات را سیو کنید)
-
-!invite username
-اضافه کردن شخص تو گروه
-(حتما شماره ربات را سیو کرده باشد)
-
-9-Member Profile and Group ^
-!owner
-مدیر گروه
-
-!id
+39_linkpv
+فرستادن لینک گروه در پی وی (حتما شماره ربات را سیو کنید)
+40_owner 
+نمایش مدیر گروه
+41_id
 ایدی شخص مورد نظر
-
-!res [username]
-در اوردن ایدی شخص مورد نظر
-
-!info 
-مخشصات فرد مورد نظر
-
-!settings
+42_res [username]
+در اوردن ایدی طرف مورد نظر 
+برا مثال👇🏿
+res @Xxbye_ettehadxX
+43_settings
 تنظیمات فعلی گروه
-
-10-filter word Mode ^
-
-!filter set (word)
-اضافه کردن کلمه جدید به لیست
-
-!filter del (word)
-حذف کلمه از لیست
-
-!filter warn (word)
-اخطار به کلمه فیتر شده
-
-!filterlist
-لیست کلمات فیلتر شده
-
-11-bot number & support ^
-
-!botnumber
+44_botnumber
 دریافت شماره ربات
-
-!support
-دعوت سازنده ربات به گروه
-(در صورت وجود مشکل)
-
-!version
-ورژن ربات
-
-!feedback (text)
+45_support
+دعوت سازنده ربات به گروه در صورت بروز مشکل
+46_feedback <text>
 ارسال نظرات به سازنده
+توجه:این ربات تمام دستوراتش بدون نیاز به (!و/)میباشد 
 
-you can use both "/" and "!" 
-.شما میتوانید از ! و / استفاده کنید
+sudo:Xxbye_ettehadxX
 
-channel: @Nod32Team
-
-G00D LUCK ^_^
+موفق باشید😊❤️
 ]]
    }
   serialize_to_file(config, './data/config.lua')
